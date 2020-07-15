@@ -1,10 +1,27 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="./index.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 		<title>Maarten and Esther's page</title>
 	</head>
 	<body>
 		<h1>Hello world</h1>
 		<p>Stay a while and listen</p>
+		<div class="playerContainer">
+			<video class="playerVideo" src="partypens.mp4">
+		</div>
+		<button class="playButton" onclick="toggleVideo()" }>Party?</button>
 	</body>
+	<footer>
+		<script>
+			const video = document.querySelector( ".playerVideo" );
+			video.muted=true;
+			const toggleVideo = () => {
+				if ( video.paused ) {
+					video.play();
+				} else {
+					video.pause();
+				}
+			};
+		</script>
+	</footer>
 </html>
